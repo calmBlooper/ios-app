@@ -15,6 +15,12 @@
 		8402C86025581A8F0027E088 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8402C85E25581A8F0027E088 /* LaunchScreen.storyboard */; };
 		8402C86B25581A8F0027E088 /* Levchuk06Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402C86A25581A8F0027E088 /* Levchuk06Tests.swift */; };
 		8402C87625581A8F0027E088 /* Levchuk06UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402C87525581A8F0027E088 /* Levchuk06UITests.swift */; };
+		8402C89025583CA10027E088 /* HTTPRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402C88F25583CA10027E088 /* HTTPRequester.swift */; };
+		8402C89525583CCC0027E088 /* APIFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402C89425583CCC0027E088 /* APIFormat.swift */; };
+		8402C89A25583D430027E088 /* HTTPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402C89925583D430027E088 /* HTTPServer.swift */; };
+		8402C89F25583FC70027E088 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402C89E25583FC70027E088 /* PersistanceManager.swift */; };
+		8402C8A425583FEA0027E088 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402C8A325583FEA0027E088 /* Repository.swift */; };
+		8402C8A92558401B0027E088 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402C8A82558401B0027E088 /* UseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		8402C87125581A8F0027E088 /* Levchuk06UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Levchuk06UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8402C87525581A8F0027E088 /* Levchuk06UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Levchuk06UITests.swift; sourceTree = "<group>"; };
 		8402C87725581A8F0027E088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8402C88F25583CA10027E088 /* HTTPRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequester.swift; sourceTree = "<group>"; };
+		8402C89425583CCC0027E088 /* APIFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFormat.swift; sourceTree = "<group>"; };
+		8402C89925583D430027E088 /* HTTPServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServer.swift; sourceTree = "<group>"; };
+		8402C89E25583FC70027E088 /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
+		8402C8A325583FEA0027E088 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		8402C8A82558401B0027E088 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,9 @@
 		8402C85225581A7F0027E088 /* Levchuk06 */ = {
 			isa = PBXGroup;
 			children = (
+				8402C88E25583B780027E088 /* Presentation */,
+				8402C88D25583B700027E088 /* Domain */,
+				8402C88C25583B690027E088 /* Data */,
 				8402C85325581A7F0027E088 /* AppDelegate.swift */,
 				8402C85525581A7F0027E088 /* SceneDelegate.swift */,
 				8402C85725581A7F0027E088 /* ViewController.swift */,
@@ -126,6 +141,33 @@
 				8402C87725581A8F0027E088 /* Info.plist */,
 			);
 			path = Levchuk06UITests;
+			sourceTree = "<group>";
+		};
+		8402C88C25583B690027E088 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8402C88F25583CA10027E088 /* HTTPRequester.swift */,
+				8402C89425583CCC0027E088 /* APIFormat.swift */,
+				8402C89925583D430027E088 /* HTTPServer.swift */,
+				8402C89E25583FC70027E088 /* PersistanceManager.swift */,
+				8402C8A325583FEA0027E088 /* Repository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8402C88D25583B700027E088 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				8402C8A82558401B0027E088 /* UseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8402C88E25583B780027E088 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +300,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8402C89525583CCC0027E088 /* APIFormat.swift in Sources */,
 				8402C85825581A7F0027E088 /* ViewController.swift in Sources */,
+				8402C89A25583D430027E088 /* HTTPServer.swift in Sources */,
+				8402C8A425583FEA0027E088 /* Repository.swift in Sources */,
 				8402C85425581A7F0027E088 /* AppDelegate.swift in Sources */,
+				8402C89025583CA10027E088 /* HTTPRequester.swift in Sources */,
+				8402C8A92558401B0027E088 /* UseCase.swift in Sources */,
 				8402C85625581A7F0027E088 /* SceneDelegate.swift in Sources */,
+				8402C89F25583FC70027E088 /* PersistanceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +485,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7W3R66UR5B;
 				INFOPLIST_FILE = Levchuk06/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -445,7 +494,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Voldemars.Levchuk06;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -455,6 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7W3R66UR5B;
 				INFOPLIST_FILE = Levchuk06/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -463,7 +513,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Voldemars.Levchuk06;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
