@@ -22,6 +22,6 @@ public class HTTPRequester {
         task.resume()
     }
     func formRequestURL(_ request: RequestTop)->String{
-        return "https://www.reddit.com/r/\(request.subreddit)/top.json?limit=\(request.limit)"+(request.after==nil ? "" : request.after!)
+        return "https://www.reddit.com/r/\(request.subreddit)/top.json?count=\(request.limit)"+(request.after==nil ? "" : request.after!)
     }
 }

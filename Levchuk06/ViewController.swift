@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class ViewController: UIViewController {
     @IBOutlet private weak var name: UILabel!
     @IBOutlet private weak var time: UILabel!
@@ -35,14 +35,7 @@ class ViewController: UIViewController {
                 self.time.text=" \(Calendar.current.dateComponents([.hour], from: date as Date, to: NSDate() as Date).hour!) hrs"
                 self.domain.text=post.domain
                 self.postTitle.text=post.title
-                    do {
-                        let url = URL(string: post.imageUrl)
-                        if let help=url{let data = try Data(contentsOf: help)
-                            self.image.image = UIImage(data: data)}
-                    }
-                    catch{
-                        print(error)
-                    }
+                    self.image.sd_setImage(with: URL(string: post.imageUrl), placeholderImage: UIImage(named: "placeholder.png"))
                 self.upsB.setTitle("\(post.ups)", for: .normal)
                 self.commentsB.setTitle("\(post.numComments)", for: .normal)
                 }

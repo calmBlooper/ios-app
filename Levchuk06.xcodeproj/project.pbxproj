@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2432F8AD88F3FDC1DEEB9BB7 /* Pods_Levchuk06.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B32DEF06E5CA4843C8AA98 /* Pods_Levchuk06.framework */; };
+		6645E26863DF7CA3E6268BBD /* Pods_Levchuk06Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0710952D54EDED8C05668285 /* Pods_Levchuk06Tests.framework */; };
 		8402C85425581A7F0027E088 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402C85325581A7F0027E088 /* AppDelegate.swift */; };
 		8402C85625581A7F0027E088 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402C85525581A7F0027E088 /* SceneDelegate.swift */; };
 		8402C85825581A7F0027E088 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402C85725581A7F0027E088 /* ViewController.swift */; };
@@ -21,6 +23,10 @@
 		8402C89F25583FC70027E088 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402C89E25583FC70027E088 /* PersistanceManager.swift */; };
 		8402C8A425583FEA0027E088 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402C8A325583FEA0027E088 /* Repository.swift */; };
 		8402C8A92558401B0027E088 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402C8A82558401B0027E088 /* UseCase.swift */; };
+		843D0756256190B3004F68F8 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D0755256190B3004F68F8 /* PostTableViewCell.swift */; };
+		8474A99A25617D0A00FAB776 /* PostTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8474A99925617D0A00FAB776 /* PostTable.storyboard */; };
+		8474A99F2561801000FAB776 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474A99E2561801000FAB776 /* PostTableViewController.swift */; };
+		E4EA4AFF0C510FFAA213C712 /* Pods_Levchuk06_Levchuk06UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B422B1DCBDC8E24AA6C4DCE /* Pods_Levchuk06_Levchuk06UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0710952D54EDED8C05668285 /* Pods_Levchuk06Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Levchuk06Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		128BBB241AFAD2A6F58D58F6 /* Pods-Levchuk06-Levchuk06UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levchuk06-Levchuk06UITests.release.xcconfig"; path = "Target Support Files/Pods-Levchuk06-Levchuk06UITests/Pods-Levchuk06-Levchuk06UITests.release.xcconfig"; sourceTree = "<group>"; };
+		2B6389ABE8F95EFAF4D26029 /* Pods-Levchuk06Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levchuk06Tests.release.xcconfig"; path = "Target Support Files/Pods-Levchuk06Tests/Pods-Levchuk06Tests.release.xcconfig"; sourceTree = "<group>"; };
+		7FEF9705EB22E81392AC3CB1 /* Pods-Levchuk06-Levchuk06UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levchuk06-Levchuk06UITests.debug.xcconfig"; path = "Target Support Files/Pods-Levchuk06-Levchuk06UITests/Pods-Levchuk06-Levchuk06UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8402C85025581A7F0027E088 /* Levchuk06.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Levchuk06.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8402C85325581A7F0027E088 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8402C85525581A7F0027E088 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +71,14 @@
 		8402C89E25583FC70027E088 /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 		8402C8A325583FEA0027E088 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		8402C8A82558401B0027E088 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		843D0755256190B3004F68F8 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		8474A99925617D0A00FAB776 /* PostTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostTable.storyboard; sourceTree = "<group>"; };
+		8474A99E2561801000FAB776 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
+		8B422B1DCBDC8E24AA6C4DCE /* Pods_Levchuk06_Levchuk06UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Levchuk06_Levchuk06UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E7B17F63E824693E48BBDD /* Pods-Levchuk06.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levchuk06.release.xcconfig"; path = "Target Support Files/Pods-Levchuk06/Pods-Levchuk06.release.xcconfig"; sourceTree = "<group>"; };
+		A9F284C021E9B2D4AFBCC9BE /* Pods-Levchuk06.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levchuk06.debug.xcconfig"; path = "Target Support Files/Pods-Levchuk06/Pods-Levchuk06.debug.xcconfig"; sourceTree = "<group>"; };
+		C7D38C1E14120139DB15D407 /* Pods-Levchuk06Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levchuk06Tests.debug.xcconfig"; path = "Target Support Files/Pods-Levchuk06Tests/Pods-Levchuk06Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7B32DEF06E5CA4843C8AA98 /* Pods_Levchuk06.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Levchuk06.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2432F8AD88F3FDC1DEEB9BB7 /* Pods_Levchuk06.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6645E26863DF7CA3E6268BBD /* Pods_Levchuk06Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +102,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4EA4AFF0C510FFAA213C712 /* Pods_Levchuk06_Levchuk06UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		163119177E2E0E7ABAB4E354 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9F284C021E9B2D4AFBCC9BE /* Pods-Levchuk06.debug.xcconfig */,
+				A4E7B17F63E824693E48BBDD /* Pods-Levchuk06.release.xcconfig */,
+				7FEF9705EB22E81392AC3CB1 /* Pods-Levchuk06-Levchuk06UITests.debug.xcconfig */,
+				128BBB241AFAD2A6F58D58F6 /* Pods-Levchuk06-Levchuk06UITests.release.xcconfig */,
+				C7D38C1E14120139DB15D407 /* Pods-Levchuk06Tests.debug.xcconfig */,
+				2B6389ABE8F95EFAF4D26029 /* Pods-Levchuk06Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3A0C6BD656AF45430660D4F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7B32DEF06E5CA4843C8AA98 /* Pods_Levchuk06.framework */,
+				8B422B1DCBDC8E24AA6C4DCE /* Pods_Levchuk06_Levchuk06UITests.framework */,
+				0710952D54EDED8C05668285 /* Pods_Levchuk06Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8402C84725581A7F0027E088 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +139,8 @@
 				8402C86925581A8F0027E088 /* Levchuk06Tests */,
 				8402C87425581A8F0027E088 /* Levchuk06UITests */,
 				8402C85125581A7F0027E088 /* Products */,
+				163119177E2E0E7ABAB4E354 /* Pods */,
+				3A0C6BD656AF45430660D4F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +167,8 @@
 				8402C85C25581A8F0027E088 /* Assets.xcassets */,
 				8402C85E25581A8F0027E088 /* LaunchScreen.storyboard */,
 				8402C86125581A8F0027E088 /* Info.plist */,
+				8474A99E2561801000FAB776 /* PostTableViewController.swift */,
+				843D0755256190B3004F68F8 /* PostTableViewCell.swift */,
 			);
 			path = Levchuk06;
 			sourceTree = "<group>";
@@ -166,6 +214,7 @@
 		8402C88E25583B780027E088 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				8474A99925617D0A00FAB776 /* PostTable.storyboard */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -177,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8402C87A25581A8F0027E088 /* Build configuration list for PBXNativeTarget "Levchuk06" */;
 			buildPhases = (
+				F39EFFF49A90217E4DC60E43 /* [CP] Check Pods Manifest.lock */,
 				8402C84C25581A7F0027E088 /* Sources */,
 				8402C84D25581A7F0027E088 /* Frameworks */,
 				8402C84E25581A7F0027E088 /* Resources */,
+				D088B5A7CB537D5B597B55C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +245,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8402C87D25581A8F0027E088 /* Build configuration list for PBXNativeTarget "Levchuk06Tests" */;
 			buildPhases = (
+				B14D51871AEA4EF876044F4A /* [CP] Check Pods Manifest.lock */,
 				8402C86225581A8F0027E088 /* Sources */,
 				8402C86325581A8F0027E088 /* Frameworks */,
 				8402C86425581A8F0027E088 /* Resources */,
@@ -212,9 +264,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8402C88025581A8F0027E088 /* Build configuration list for PBXNativeTarget "Levchuk06UITests" */;
 			buildPhases = (
+				4755F917A1C84FE5AB25A826 /* [CP] Check Pods Manifest.lock */,
 				8402C86D25581A8F0027E088 /* Sources */,
 				8402C86E25581A8F0027E088 /* Frameworks */,
 				8402C86F25581A8F0027E088 /* Resources */,
+				40336E29E398A1AB361DF0DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -274,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8402C86025581A8F0027E088 /* LaunchScreen.storyboard in Resources */,
+				8474A99A25617D0A00FAB776 /* PostTable.storyboard in Resources */,
 				8402C85D25581A8F0027E088 /* Assets.xcassets in Resources */,
 				8402C85B25581A7F0027E088 /* Main.storyboard in Resources */,
 			);
@@ -295,16 +350,121 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		40336E29E398A1AB361DF0DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Levchuk06-Levchuk06UITests/Pods-Levchuk06-Levchuk06UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Levchuk06-Levchuk06UITests/Pods-Levchuk06-Levchuk06UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Levchuk06-Levchuk06UITests/Pods-Levchuk06-Levchuk06UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4755F917A1C84FE5AB25A826 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Levchuk06-Levchuk06UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B14D51871AEA4EF876044F4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Levchuk06Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D088B5A7CB537D5B597B55C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Levchuk06/Pods-Levchuk06-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Levchuk06/Pods-Levchuk06-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Levchuk06/Pods-Levchuk06-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F39EFFF49A90217E4DC60E43 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Levchuk06-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8402C84C25581A7F0027E088 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843D0756256190B3004F68F8 /* PostTableViewCell.swift in Sources */,
 				8402C89525583CCC0027E088 /* APIFormat.swift in Sources */,
 				8402C85825581A7F0027E088 /* ViewController.swift in Sources */,
 				8402C89A25583D430027E088 /* HTTPServer.swift in Sources */,
 				8402C8A425583FEA0027E088 /* Repository.swift in Sources */,
 				8402C85425581A7F0027E088 /* AppDelegate.swift in Sources */,
+				8474A99F2561801000FAB776 /* PostTableViewController.swift in Sources */,
 				8402C89025583CA10027E088 /* HTTPRequester.swift in Sources */,
 				8402C8A92558401B0027E088 /* UseCase.swift in Sources */,
 				8402C85625581A7F0027E088 /* SceneDelegate.swift in Sources */,
@@ -481,6 +641,7 @@
 		};
 		8402C87B25581A8F0027E088 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9F284C021E9B2D4AFBCC9BE /* Pods-Levchuk06.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -500,6 +661,7 @@
 		};
 		8402C87C25581A8F0027E088 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4E7B17F63E824693E48BBDD /* Pods-Levchuk06.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -519,6 +681,7 @@
 		};
 		8402C87E25581A8F0027E088 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7D38C1E14120139DB15D407 /* Pods-Levchuk06Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +703,7 @@
 		};
 		8402C87F25581A8F0027E088 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B6389ABE8F95EFAF4D26029 /* Pods-Levchuk06Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -561,6 +725,7 @@
 		};
 		8402C88125581A8F0027E088 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FEF9705EB22E81392AC3CB1 /* Pods-Levchuk06-Levchuk06UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -580,6 +745,7 @@
 		};
 		8402C88225581A8F0027E088 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 128BBB241AFAD2A6F58D58F6 /* Pods-Levchuk06-Levchuk06UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
