@@ -13,14 +13,14 @@ class PostTableViewCell: UITableViewCell {
     static let reuseIdentifier="postCell"
     
     // MARK: - IBOutlets
-    @IBOutlet private weak var name: UILabel!
-    @IBOutlet private weak var time: UILabel!
-    @IBOutlet private weak var domain: UILabel!
-    @IBOutlet private weak var savedB: UIButton!
-    @IBOutlet private weak var title: UILabel!
-    @IBOutlet private weak var upsB: UIButton!
-    @IBOutlet private weak var commentsB: UIButton!
-    @IBOutlet private weak var imageHolder: UIImageView!
+    @IBOutlet  weak var name: UILabel!
+    @IBOutlet  weak var time: UILabel!
+    @IBOutlet  weak var domain: UILabel!
+    @IBOutlet  weak var savedB: UIButton!
+    @IBOutlet  weak var title: UILabel!
+    @IBOutlet  weak var upsB: UIButton!
+    @IBOutlet  weak var commentsB: UIButton!
+    @IBOutlet  weak var imageHolder: UIImageView!
 
     
     // MARK: - Lifecycle
@@ -52,11 +52,18 @@ class PostTableViewCell: UITableViewCell {
         
     }
     
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
+        tap.numberOfTapsRequired=2
+        self.addGestureRecognizer(tap)
         // Initialization code
     }
-
+    @objc func doubleTapped() {
+        self.savedB.isSelected=true;
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

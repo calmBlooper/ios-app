@@ -8,19 +8,22 @@
 import UIKit
 import SDWebImage
 class ViewController: UIViewController {
-    @IBOutlet private weak var name: UILabel!
-    @IBOutlet private weak var time: UILabel!
-    @IBOutlet private weak var postTitle: UILabel!
-    @IBOutlet private weak var domain: UILabel!
-    @IBOutlet private weak var savedB: UIButton!
-    @IBOutlet private weak var image: UIImageView!
-    @IBOutlet private weak var upsB: UIButton!
-    @IBOutlet private weak var commentsB: UIButton!
+    @IBOutlet  weak var name: UILabel!
+    @IBOutlet  weak var time: UILabel!
+    @IBOutlet  weak var postTitle: UILabel!
+    @IBOutlet  weak var domain: UILabel!
+    @IBOutlet  weak var savedB: UIButton!
+    @IBOutlet  weak var image: UIImageView!
+    @IBOutlet  weak var upsB: UIButton!
+    @IBOutlet  weak var commentsB: UIButton!
     @IBOutlet private weak var shareB: UIButton!
+    var firstname: String?="default title"
     private var saved: Bool=false
     override func viewDidLoad() {
         super.viewDidLoad()
-        useCase.fetchTopPosts(subreddit: "KnightsOfPineapple", limit: 13, after: nil,onCompletion: showOneImagePost(_:))
+ 
+        useCase.fetchTopPosts(subreddit: "EarthPorn", limit: 13, after: nil,onCompletion: showOneImagePost(_:))
+        
         //self.upsB.isEnabled=false
        /* useCase.fetchTopPosts(subreddit: "KnightsOfPineapple", limit: 13, after: nil)*/
         
@@ -28,6 +31,7 @@ class ViewController: UIViewController {
     }
     func showOneImagePost(_ results: ResponseTop){
         for post in results.posts {
+            
             if(post.imageUrl.contains(".jpg")||post.imageUrl.contains(".png")||post.imageUrl.contains(".jpeg")||post.imageUrl.contains(".tiff")||post.imageUrl.contains(".gif")) {
                 DispatchQueue.main.async{
                 self.name.text=post.author
@@ -38,6 +42,7 @@ class ViewController: UIViewController {
                     self.image.sd_setImage(with: URL(string: post.imageUrl), placeholderImage: UIImage(named: "placeholder.png"))
                 self.upsB.setTitle("\(post.ups)", for: .normal)
                 self.commentsB.setTitle("\(post.numComments)", for: .normal)
+                    self.postTitle.text="There is supposed to be the post you clicked on + it`s comments\(self.firstname!)"
                 }
                 return
             }

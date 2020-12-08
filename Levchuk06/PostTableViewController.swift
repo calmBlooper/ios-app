@@ -12,8 +12,9 @@ class PostTableViewController: UITableViewController {
     private var posts: [ResponsePost]=[]
     override func viewDidLoad() {
         super.viewDidLoad()
-        subreddit.text="r/formula1"
-        useCase.fetchTopPosts(subreddit: "formula1", limit: 22, after: nil,onCompletion: loadImagePosts(_:))
+        subreddit.text="r/EarthPorn"
+        print("hello")
+        useCase.fetchTopPosts(subreddit: "EarthPorn", limit: 22, after: nil,onCompletion: loadImagePosts(_:))
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -22,7 +23,12 @@ class PostTableViewController: UITableViewController {
     }
    
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    guard let firstVC = segue.destination as? ViewController else { return }
+       // for post in posts:
+        firstVC.firstname="Looooo\(type(of:((sender as! UIButton).superview)))ool"
+        //firstVC.image.sd_setImage(with: URL(string: sender.), placeholderImage: UIImage(named: "placeholder.png"))
+    }
 func loadImagePosts(_ results: ResponseTop){
     DispatchQueue.main.async{
     for post in results.posts {
@@ -30,7 +36,7 @@ func loadImagePosts(_ results: ResponseTop){
            // DispatchQueue.main.async{
                 self.posts.append(post)
           //
-            
+        print(post.title)
         }
     
         self.tableView.reloadData()
