@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oZz-mD-OCX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IJb-Ki-SxJ">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -13,13 +13,13 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Levchuk06" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Levchuk06" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7c-Ec-2FM">
-                                <rect key="frame" x="0.0" y="269" width="428" height="300"/>
+                                <rect key="frame" x="0.0" y="44" width="428" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CU5-gJ-usf">
                                         <rect key="frame" x="20" y="20" width="43" height="30"/>
@@ -78,7 +78,7 @@
                                         <color key="highlightedColor" systemColor="labelColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kxC-4H-SHR">
-                                        <rect key="frame" x="0.0" y="91.6666666666667" width="428" height="168.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="91.666666666666643" width="428" height="168.33333333333337"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEG-47-5b4">
                                         <rect key="frame" x="115" y="265" width="111" height="30"/>
@@ -147,6 +147,10 @@
                                     <constraint firstItem="R21-R0-sSe" firstAttribute="top" secondItem="e7c-Ec-2FM" secondAttribute="top" constant="15" id="yML-ks-nnz"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OCt-Ol-0Ds">
+                                <rect key="frame" x="0.0" y="344" width="428" height="548"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
@@ -154,8 +158,12 @@
                             <constraint firstItem="e7c-Ec-2FM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7SS-0m-SPg"/>
                             <constraint firstItem="e7c-Ec-2FM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Lwg-7Q-P8D"/>
                             <constraint firstAttribute="trailing" secondItem="e7c-Ec-2FM" secondAttribute="trailing" constant="100" id="Mdg-lY-4wt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OCt-Ol-0Ds" secondAttribute="trailing" id="Q6I-0b-eyD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OCt-Ol-0Ds" secondAttribute="bottom" id="RVe-Zz-q39"/>
+                            <constraint firstItem="OCt-Ol-0Ds" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f29-dW-HKu"/>
+                            <constraint firstItem="e7c-Ec-2FM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="h8Q-Z9-zMD"/>
                             <constraint firstItem="e7c-Ec-2FM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nvj-Gb-twt"/>
-                            <constraint firstItem="e7c-Ec-2FM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-150" id="yuq-PY-p9J"/>
+                            <constraint firstItem="OCt-Ol-0Ds" firstAttribute="top" secondItem="e7c-Ec-2FM" secondAttribute="bottom" id="ooS-dz-99i"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -182,6 +190,7 @@
                     <connections>
                         <outlet property="Name" destination="CU5-gJ-usf" id="U4Y-fU-rX8"/>
                         <outlet property="commentsB" destination="wEG-47-5b4" id="gbf-6Z-ZSA"/>
+                        <outlet property="commentsContainer" destination="OCt-Ol-0Ds" id="4KF-O4-rfJ"/>
                         <outlet property="domain" destination="0tu-OC-ozW" id="d3W-Es-BSn"/>
                         <outlet property="image" destination="kxC-4H-SHR" id="2Sw-oY-5yv"/>
                         <outlet property="postTitle" destination="YzF-Tw-lh7" id="IGt-Tg-YAS"/>
@@ -317,9 +326,6 @@
                                                     <state key="normal" title="Comments">
                                                         <imageReference key="image" image="text.bubble.rtl" catalog="system" symbolScale="large"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="BYZ-38-t0r" kind="show" id="ZbH-XT-vP6"/>
-                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18M-QI-nhq" userLabel="Upvotes">
                                                     <rect key="frame" x="10" y="265" width="95" height="30"/>
@@ -388,6 +394,7 @@
                                     <outlet property="imageHolder" destination="8Kg-S0-pWb" id="yK1-dD-uIz"/>
                                     <outlet property="name" destination="5hM-9b-s9m" id="DEf-6i-aLW"/>
                                     <outlet property="savedB" destination="FlP-oc-0Cg" id="EfL-HC-Iw2"/>
+                                    <outlet property="shareBH" destination="3f1-Cr-CaH" id="Rk2-qx-kgt"/>
                                     <outlet property="time" destination="tiX-qw-ugL" id="iM0-sb-NUE"/>
                                     <outlet property="title" destination="yaz-JU-2it" id="LUe-vH-HAe"/>
                                     <outlet property="upsB" destination="18M-QI-nhq" id="Uf4-H0-Zcg"/>
@@ -399,13 +406,32 @@
                             <outlet property="delegate" destination="oZz-mD-OCX" id="G9x-fC-99G"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="FKq-3Z-PJC"/>
                     <connections>
                         <outlet property="subreddit" destination="OEK-Ty-vpO" id="68T-rJ-YDZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VCz-WF-i3z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1021" y="45"/>
+            <point key="canvasLocation" x="1920.5607476635512" y="44.708423326133911"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GDQ-to-uhm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IJb-Ki-SxJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MlE-UJ-jlS">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oZz-mD-OCX" kind="relationship" relationship="rootViewController" id="5ER-lT-32a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uPc-S6-e0q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020.5607476635513" y="44.708423326133911"/>
         </scene>
     </scenes>
     <resources>

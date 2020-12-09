@@ -10,11 +10,13 @@ import UIKit
 class PostTableViewController: UITableViewController {
     @IBOutlet private weak var subreddit: UILabel!
     private var posts: [ResponsePost]=[]
+    var subredditH:String?
     override func viewDidLoad() {
+        subredditH="EarthPorn"
         super.viewDidLoad()
-        subreddit.text="r/EarthPorn"
+        subreddit.text="r/\(subredditH ?? "default")"
         print("hello")
-        useCase.fetchTopPosts(subreddit: "EarthPorn", limit: 22, after: nil,onCompletion: loadImagePosts(_:))
+        useCase.fetchTopPosts(subreddit: subredditH ?? "default", limit: 22, after: nil,onCompletion: loadImagePosts(_:))
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -22,13 +24,31 @@ class PostTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
    
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath ){
+  
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let destination = storyBoard.instantiateViewController(identifier: "ViewController") as! ViewController
+        let bufferPost=self.posts[indexPath.row]
+        destination.postIdH=bufferPost.id
+        destination.titleH=bufferPost.title
+        destination.authorH=bufferPost.author
+        destination.timeH=bufferPost.timeCreated
+        destination.commentsH=bufferPost.numComments
+        destination.imageAddressH=bufferPost.imageUrl
+        destination.ratingH=bufferPost.ups
+        destination.domainH=bufferPost.domain
+        destination.subredditH=subredditH ?? "default"
+        //navigationController=UIApplication.shared.keyWindow
+        navigationController?.pushViewController(destination, animated: true)
+    }
+/*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     guard let firstVC = segue.destination as? ViewController else { return }
        // for post in posts:
-        firstVC.firstname="Looooo\(type(of:((sender as! UIButton).superview)))ool"
+        firstVC.firstname="\(type(of:((sender as! UIButton).tag.hashValue)))"
         //firstVC.image.sd_setImage(with: URL(string: sender.), placeholderImage: UIImage(named: "placeholder.png"))
     }
+ */
 func loadImagePosts(_ results: ResponseTop){
     DispatchQueue.main.async{
     for post in results.posts {
@@ -36,7 +56,7 @@ func loadImagePosts(_ results: ResponseTop){
            // DispatchQueue.main.async{
                 self.posts.append(post)
           //
-        print(post.title)
+       // print(post.title)
         }
     
         self.tableView.reloadData()

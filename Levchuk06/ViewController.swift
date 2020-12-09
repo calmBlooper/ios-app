@@ -4,7 +4,7 @@
 //
 //  Created by Admin on 08.11.2020.
 //
-
+import SwiftUI
 import UIKit
 import SDWebImage
 class ViewController: UIViewController {
@@ -17,37 +17,46 @@ class ViewController: UIViewController {
     @IBOutlet  weak var upsB: UIButton!
     @IBOutlet  weak var commentsB: UIButton!
     @IBOutlet private weak var shareB: UIButton!
-    var firstname: String?="default title"
+    @IBOutlet weak var commentsContainer: UIView!
+    var subredditH:String?
+    var postIdH: String?
+    var authorH: String?
+    var titleH: String?
+    var timeH: Double?
+    var domainH: String?
+    var imageAddressH: String?
+    var commentsH: Int?
+    var ratingH: Int?
     private var saved: Bool=false
     override func viewDidLoad() {
         super.viewDidLoad()
- 
-        useCase.fetchTopPosts(subreddit: "EarthPorn", limit: 13, after: nil,onCompletion: showOneImagePost(_:))
-        
-        //self.upsB.isEnabled=false
-       /* useCase.fetchTopPosts(subreddit: "KnightsOfPineapple", limit: 13, after: nil)*/
-        
-        // Do any additional setup after loading the view.
+ loadInfo()
+        let childView = UIHostingController(rootView: ContentView(subreddit: subredditH ?? "default", postId: postIdH ?? "default"))
+        print(subredditH)
+        print(postIdH)
+              addChild(childView)
+        childView.view.frame = commentsContainer.bounds
+        commentsContainer.addSubview(childView.view)
+              childView.didMove(toParent: self)
+        shareB.addTarget(self,
+                               action: #selector(shareBClicked),
+                               for: .touchUpInside)
+
     }
-    func showOneImagePost(_ results: ResponseTop){
-        for post in results.posts {
-            
-            if(post.imageUrl.contains(".jpg")||post.imageUrl.contains(".png")||post.imageUrl.contains(".jpeg")||post.imageUrl.contains(".tiff")||post.imageUrl.contains(".gif")) {
-                DispatchQueue.main.async{
-                self.name.text=post.author
-                let date = NSDate(timeIntervalSince1970: post.timeCreated)
-                self.time.text=" \(Calendar.current.dateComponents([.hour], from: date as Date, to: NSDate() as Date).hour!) hrs"
-                self.domain.text=post.domain
-                self.postTitle.text=post.title
-                    self.image.sd_setImage(with: URL(string: post.imageUrl), placeholderImage: UIImage(named: "placeholder.png"))
-                self.upsB.setTitle("\(post.ups)", for: .normal)
-                self.commentsB.setTitle("\(post.numComments)", for: .normal)
-                    self.postTitle.text="There is supposed to be the post you clicked on + it`s comments\(self.firstname!)"
-                }
-                return
-            }
+    func loadInfo(){
+        DispatchQueue.main.async{
+            self.name.text="u/\(self.authorH ?? "default_author")"
+            let date = NSDate(timeIntervalSince1970: self.timeH ?? 0)
+            self.time.text=" \(Calendar.current.dateComponents([.hour], from: date as Date, to: NSDate() as Date).hour!) hrs"
+            self.domain.text=self.domainH ?? "default_domain"
+            self.postTitle.text=self.titleH ?? "default_title"
+            self.image.sd_setImage(with: URL(string: self.imageAddressH ?? "lol"), placeholderImage: UIImage(named: "placeholder.png"))
+            self.upsB.setTitle("\(self.ratingH ?? 0)", for: .normal)
+            self.commentsB.setTitle("\(self.commentsH ?? 0)", for: .normal)
+        
         }
     }
+
 
 
 
@@ -72,5 +81,14 @@ class ViewController: UIViewController {
         saved=(!saved)
         self.savedB.isSelected=saved
     }
+    
+    @objc func shareBClicked(){
+        guard let data = URL(string: "https://www.reddit.com/r/\(self.subredditH ?? "default")/comments/\(self.postIdH ?? "default")") else { return }
+        let av = UIActivityViewController(activityItems: [data], applicationActivities: nil)
+     
+        UIApplication.shared.windows.first?.rootViewController?.present(av, animated: true)
+        print("Shared")
+    }
+    
 }
 

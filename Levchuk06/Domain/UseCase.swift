@@ -13,10 +13,45 @@ public class UseCase{
     func processTopPosts(_ results: ResponseTop){
       printResults(results)
     }
+    
+    func processComments(_ results: CommentsResponse){
+        printComments(results)
+            }
+    func fetchComments(subreddit: String,postId: String,onCompletion: @escaping(_ results: CommentsResponse)->Void){
 
+        repository.demandComments(subreddit: subreddit, postId: postId, onCompletion: onCompletion)
+    }
+    
     func fetchTopPosts(subreddit: String,limit: UInt8,after: String?,onCompletion: @escaping(_ results: ResponseTop)->Void){
         repository.demandTopPosts(subreddit: subreddit, limit: limit, after: after, onCompletion: onCompletion)
     }
+    func printComments(_ results: CommentsResponse){
+        print("Received results(\(results.comments.count) comments):")
+        if let after=results.after {
+            print("After: \(after)")
+        }
+        if let before=results.before {
+            print("Before: \(before)")
+        }
+        for comment in results.comments {
+            print("""
+
+
+##########
+Static id:\(comment.id)
+Id: \(comment.commentId)
+Content: \(comment.text)
+Author: \(comment.author)
+Rating: \(comment.rating)
+Permalink: \(comment.permalink)
+""")
+            let date = NSDate(timeIntervalSince1970:comment.timeCreated)
+            print("Posted \(Calendar.current.dateComponents([.hour], from: date as Date, to: NSDate() as Date).hour!) hours ago.")
+            print("##########")
+        }
+    }
+    }
+    
     func printResults(_ results: ResponseTop) {
         print("Received results(\(results.posts.count) posts):")
         if let after=results.after {
@@ -30,6 +65,7 @@ public class UseCase{
 
 
 ##########
+Id: \(post.id)
 Title: \(post.title)
 Author: \(post.author)
 Domain: \(post.domain)
@@ -42,12 +78,12 @@ Number of comments: \(post.numComments)
             print("##########")
         }
     }
-}
+
 public var httpRequester=HTTPRequester()
 public var httpService = HTTPService()
 public var persistenceManager = PersistenceManager()
 public var repository = Repository()
 public var useCase=UseCase()
-
+public var cComment = Comment(id: 1,commentId:"fff",author: "default author", timeCreated: 23, rating: 424, text: "So uncivilized uncivilized uncivilized uncivilized uncivilized uncivilized uncivilized uncivilized uncivilized uncivilized fbsdlfbvasfhbvuefasbvkaerhsbvk hfaebrhkuvbarjbFHVBSJHFBVHSBJHVSBFHVBSVHBRHVBAUHVBAKJVHBSJEHBJHSDBUJHBFJHB",permalink:"ffsf")
 
 

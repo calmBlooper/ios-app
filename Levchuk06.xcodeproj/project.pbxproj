@@ -24,6 +24,9 @@
 		8402C8A425583FEA0027E088 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402C8A325583FEA0027E088 /* Repository.swift */; };
 		8402C8A92558401B0027E088 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402C8A82558401B0027E088 /* UseCase.swift */; };
 		843D0756256190B3004F68F8 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D0755256190B3004F68F8 /* PostTableViewCell.swift */; };
+		844EEE2C2580E57E0065219F /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EEE2B2580E57E0065219F /* CommentView.swift */; };
+		844EEE312580E5B20065219F /* CommentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EEE302580E5B20065219F /* CommentCellView.swift */; };
+		844EEE362580E5D40065219F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EEE352580E5D40065219F /* ContentView.swift */; };
 		8474A99A25617D0A00FAB776 /* PostTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8474A99925617D0A00FAB776 /* PostTable.storyboard */; };
 		8474A99F2561801000FAB776 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474A99E2561801000FAB776 /* PostTableViewController.swift */; };
 		E4EA4AFF0C510FFAA213C712 /* Pods_Levchuk06_Levchuk06UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B422B1DCBDC8E24AA6C4DCE /* Pods_Levchuk06_Levchuk06UITests.framework */; };
@@ -72,6 +75,9 @@
 		8402C8A325583FEA0027E088 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		8402C8A82558401B0027E088 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		843D0755256190B3004F68F8 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		844EEE2B2580E57E0065219F /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		844EEE302580E5B20065219F /* CommentCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCellView.swift; sourceTree = "<group>"; };
+		844EEE352580E5D40065219F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8474A99925617D0A00FAB776 /* PostTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostTable.storyboard; sourceTree = "<group>"; };
 		8474A99E2561801000FAB776 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
 		8B422B1DCBDC8E24AA6C4DCE /* Pods_Levchuk06_Levchuk06UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Levchuk06_Levchuk06UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +175,9 @@
 				8402C86125581A8F0027E088 /* Info.plist */,
 				8474A99E2561801000FAB776 /* PostTableViewController.swift */,
 				843D0755256190B3004F68F8 /* PostTableViewCell.swift */,
+				844EEE2B2580E57E0065219F /* CommentView.swift */,
+				844EEE302580E5B20065219F /* CommentCellView.swift */,
+				844EEE352580E5D40065219F /* ContentView.swift */,
 			);
 			path = Levchuk06;
 			sourceTree = "<group>";
@@ -460,10 +469,13 @@
 			files = (
 				843D0756256190B3004F68F8 /* PostTableViewCell.swift in Sources */,
 				8402C89525583CCC0027E088 /* APIFormat.swift in Sources */,
+				844EEE362580E5D40065219F /* ContentView.swift in Sources */,
+				844EEE312580E5B20065219F /* CommentCellView.swift in Sources */,
 				8402C85825581A7F0027E088 /* ViewController.swift in Sources */,
 				8402C89A25583D430027E088 /* HTTPServer.swift in Sources */,
 				8402C8A425583FEA0027E088 /* Repository.swift in Sources */,
 				8402C85425581A7F0027E088 /* AppDelegate.swift in Sources */,
+				844EEE2C2580E57E0065219F /* CommentView.swift in Sources */,
 				8474A99F2561801000FAB776 /* PostTableViewController.swift in Sources */,
 				8402C89025583CA10027E088 /* HTTPRequester.swift in Sources */,
 				8402C8A92558401B0027E088 /* UseCase.swift in Sources */,
